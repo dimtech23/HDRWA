@@ -7,6 +7,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': 'http://localhost:4000',
+      '/hdrwa/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/hdrwa/, ''),
+      },
     },
   },
 })
