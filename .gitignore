@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# build outputs
+dist/
+**/dist/
+
+# local IDE/tooling
+.vscode/
+.idea/
+
+# logs
+*.log
